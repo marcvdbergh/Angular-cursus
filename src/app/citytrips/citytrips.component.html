@@ -1,0 +1,28 @@
+<ul *ngIf="showCities" class="col-lg">
+  <li *ngFor="let city of cities"><a href="#" (click)="onClickCity($event,city)">{{city.id}} - {{city.name}}</a> -
+    {{city.province}}
+    <span class="badge badge-dark float-right">{{city.rating}}</span>
+  </li>
+</ul>
+
+<!--<div *ngIf="currentCity">
+  <img [src]="cityPhoto" [alt]="currentCity.name" class="img-fluid" />
+</div>-->
+
+<div class="col-md-6">
+  <div class="col-md-6" *ngIf="currentCity">
+    <app-city-detail [cityFromParent]="currentCity" (rating)="updateRating($event)"></app-city-detail>
+  </div>
+  <input type="text" placeholder="" [(ngModel)]="newId" class="invisible">
+  <input type="text" placeholder="New city.." [(ngModel)]="newCity" class="form-control-lg">
+</div>
+<div class="col-md-6">
+  <select ng-required="true" [(ngModel)]="newProvence" class="form-control-lg">
+    <option value="" disabled>Kies een provincie</option>
+    <option *ngFor="let provence of procinceLetters" [value]="provence">{{provence}}</option>
+  </select>
+  <br/>
+  <button class="btn btn-success" (click)="onClickSaveCity()">Save</button>
+  <button id="newbutton" class="btn btn-danger" (click)="onClickDelCity()">Delete</button>
+  <button class="btn btn-primary" (click)="onClickNewCity()">New</button>
+</div>

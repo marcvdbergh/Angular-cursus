@@ -1,0 +1,20 @@
+<div>
+  <h2>Details
+    <button (click)="rate(1)" class="btn btn-sm btn-success">+1</button>
+    <button (click)="rate(-1)" class="btn btn-sm btn-danger">-1</button>
+  </h2>
+  <ul class="list-group">
+    <li class="list-group-item">Rating: {{cityFromParent.rating}}</li>
+    <li class="list-group-item">Naam: {{cityFromParent.name}}</li>
+    <li class="list-group-item">Provincie: {{cityFromParent.province}}</li>
+    <li class="list-group-item">Highlights:
+      <ul>
+        <li *ngFor="let highlight of cityFromParent.highlights" [value]="highlight">{{highlight}}</li>
+      </ul>
+    <li class="list-group-item"><img src="assets/img/{{cityFromParent.name}}.jpg" class="img-fluid"
+        alt="{{cityFromParent.name}}" onerror="this.src='assets/img/notfound.png';"></li>
+  </ul>
+  <h2>Prijs voor een weekendje weg: {{ cityFromParent.price | currency:'EUR':'symbol':'1.2' }}</h2>
+  <button class="btn btn-lg btn-info" (click)="onClickOrder(cityFromParent)">Boek nu!</button>
+</div>
+<app-city-orders></app-city-orders>

@@ -1,0 +1,66 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "name": "Amsterdam",
+      "province": "NH",
+      "rating": 3,
+      "price": 99.99,
+      "highlights": [
+        "Westerkerk",
+        "Dam"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Leeuwarden",
+      "province": "FR",
+      "rating": 5,
+      "price": 99.99,
+      "highlights": [
+        "Water",
+        "Friezen"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Den Haag",
+      "rating": 6,
+      "price": 99.99,
+      "province": "ZH"
+    },
+    {
+      "id": 4,
+      "name": "Enschede",
+      "rating": 5,
+      "price": 99.99,
+      "province": "OV"
+    },
+    {
+      "id": 5,
+      "name": "Nijmegen",
+      "province": "GE",
+      "rating": 5,
+      "price": 99.99,
+      "highlights": [
+        "st Stevenskerk",
+        "Waag"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Den Bosch",
+      "rating": 7,
+      "price": 99.99,
+      "province": "NB"
+    },
+    {
+      "id": 8,
+      "name": "TESTCITY",
+      "province": "UT",
+      "rating": 2,
+      "price": 99.99,
+      "highlights": []
+    }
+  ]
+}

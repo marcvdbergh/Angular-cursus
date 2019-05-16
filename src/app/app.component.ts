@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'testproject';
+  mijnnaam = 'M@rc';
+  achternaam: string;
+  showCities = true;
+  ngOnInit() {
+    console.log('App loaded');
+    this.achternaam = 'vd Bergh';
+  }
 }
